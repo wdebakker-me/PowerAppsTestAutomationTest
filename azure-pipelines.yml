@@ -4,14 +4,14 @@ name: PowerAppsTestAutomation-$(date:yyyyMMdd)$(rev:.r)
 
 resources:
   repositories:
-    - repository: PowerAppsTestAutomation
+    - repository: PowerAppsTestAutomationTest
       type: github
       # GitHub Repo(e.g. <FORK>/PowerAppsTestAutomation)
       # Recommended to Fork or Duplicate if custom auth flows are required
-      name: CesarCalvoCobo/PowerAppsTestAutomation
+      name: wdebakker-me/PowerAppsTestAutomationTest
       ref: master
       # Name of the GitHub OAuth ADO Service Connection
-      endpoint: GitHubCCC
+      endpoint: wdebakker-me
 
 parameters:
  - name: image
@@ -64,9 +64,9 @@ jobs:
 
   steps:
   - checkout: self
-  - checkout: PowerAppsTestAutomation
+  - checkout: PowerAppsTestAutomationTest
   #- template: localsteps.yml # Provide optional local YAML template here
-  - template: frameworksteps.yml@PowerAppsTestAutomation
+  - template: frameworksteps.yml
     parameters:
       OnlineUsername: $(OnlineUsername)
       OnlinePassword: $(OnlinePassword)
