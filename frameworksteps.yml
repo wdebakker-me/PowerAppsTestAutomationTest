@@ -11,21 +11,6 @@ parameters:
     RepositoryName: 'PowerAppsTestAutomation'
 
 steps:
-    - powershell: |
-       # Set agent screen resolution to 1920x1080 to avoid sizing issues with Portal
-       Set-DisplayResolution -Width 1920 -Height 1080 -Force
-   
-       # Wait 10 seconds
-       Start-Sleep -s 10
-   
-       # Verify Screen Resolution is set to 1920x1080
-       Get-DisplayResolution
-
-      ignoreLASTEXITCODE: true
-
-      displayName: 'Set Agent Screen Resolution to 1920x1080'
-
-
     - task: NuGetCommand@2
 
       displayName: 'Restore NuGet Packages'
