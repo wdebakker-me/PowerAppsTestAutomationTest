@@ -60,7 +60,11 @@ jobs:
     # Project name of repo containing TestAutomationURLs (spaces should be encoded as %20)
     # Example: Contoso Test Framework --> Contoso%20Test%20Framework
   - name: LocalProjectName
-    value: PowerAppsTestAutomation
+    value: PowerAppsTestAutomationTest
+  - name: OnlineUsername
+    value: admin@CRM981282.onmicrosoft.com
+  - name: OnlinePassword
+    value: x5[{B(W}V8v2oF7q
 
   steps:
   - checkout: self
