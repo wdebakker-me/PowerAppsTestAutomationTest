@@ -17,7 +17,7 @@ steps:
 
       inputs:
 
-        restoreSolution: '${{parameters.RepositoryName}}/PowerAppsTestAutomation.sln'
+        restoreSolution: 'PowerAppsTestAutomation.sln'
 
 
     - task: VSBuild@1
