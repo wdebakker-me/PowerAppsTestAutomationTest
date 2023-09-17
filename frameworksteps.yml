@@ -8,7 +8,7 @@ parameters:
     TestAutomationURLFilePath: ''
     UsePrivateMode: ''
     LoginMethod: ''
-    RepositoryName: 'PowerAppsTestAutomation'
+    RepositoryName: 'PowerAppsTestAutomationTest'
 
 steps:
     - task: NuGetCommand@2
