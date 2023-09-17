@@ -43,7 +43,7 @@ parameters:
 jobs:
 - job: "PowerAppsTestFrameworkAutomation"
   pool:
-    vmImage: ${{ parameters.image }}
+    name: Default
     demands:
     - msbuild
     - visualstudio
