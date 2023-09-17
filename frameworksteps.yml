@@ -26,7 +26,7 @@ steps:
 
       inputs:
 
-        solution: '${{parameters.RepositoryName}}/PowerAppsTestAutomation.sln'
+        solution: 'PowerAppsTestAutomation.sln'
 
 
 
@@ -36,13 +36,13 @@ steps:
       condition: or(eq('${{ parameters.BrowserType }}', 'Chrome'), eq('${{ parameters.BrowserType }}', 'All'))
       inputs:
 
-        testAssemblyVer2: '${{parameters.RepositoryName}}\Microsoft.PowerApps.TestAutomation.Tests\bin\Debug\Microsoft.PowerApps.TestAutomation.Tests.dll'
+        testAssemblyVer2: 'Microsoft.PowerApps.TestAutomation.Tests\bin\Debug\Microsoft.PowerApps.TestAutomation.Tests.dll'
 
         testFiltercriteria: 'TestCategory=PowerAppsTestAutomation'
 
         uiTests: true
 
-        runSettingsFile: '${{parameters.RepositoryName}}\Microsoft.PowerApps.TestAutomation.Tests/patestautomation.runsettings'
+        runSettingsFile: 'Microsoft.PowerApps.TestAutomation.Tests/patestautomation.runsettings'
 
         overrideTestrunParameters: '-OnlineUsername ${{ parameters.OnlineUsername }} -OnlinePassword ${{ parameters.OnlinePassword }} -BrowserType "Chrome" -OnlineUrl ${{ parameters.OnlineUrl }} -UsePrivateMode ${{ parameters.UsePrivateMode }} -TestAutomationURLFilePath ${{ parameters.TestAutomationURLFilePath }} -DriversPath $(ChromeWebDriver) -LoginMethod ${{ parameters.LoginMethod }}'
 
